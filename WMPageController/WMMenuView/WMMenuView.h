@@ -94,6 +94,8 @@ typedef NS_ENUM(NSUInteger, WMMenuViewLayoutMode) {
 @property (nonatomic, assign) BOOL progressViewIsNaughty;
 @property (nonatomic, assign) BOOL showOnNavigationBar;
 
+@property (nonatomic, assign) BOOL isDeselectedItem;
+
 - (void)slideMenuAtProgress:(CGFloat)progress;
 - (void)selectItemAtIndex:(NSInteger)index;
 - (void)resetFrames;

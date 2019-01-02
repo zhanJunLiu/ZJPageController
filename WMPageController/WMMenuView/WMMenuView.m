@@ -234,6 +234,11 @@
 }
 
 - (void)selectItemAtIndex:(NSInteger)index {
+    
+    if (self.isDeselectedItem) {
+        return;
+    }
+    
     NSInteger tag = index + WMMENUITEM_TAG_OFFSET;
     NSInteger currentIndex = self.selItem.tag - WMMENUITEM_TAG_OFFSET;
     self.selectIndex = index;
