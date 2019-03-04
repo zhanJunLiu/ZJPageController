@@ -234,15 +234,11 @@
 }
 
 - (void)selectItemAtIndex:(NSInteger)index {
-    
-    if (self.isDeselectedItem) {
-        return;
-    }
-    
+
     NSInteger tag = index + WMMENUITEM_TAG_OFFSET;
     NSInteger currentIndex = self.selItem.tag - WMMENUITEM_TAG_OFFSET;
     self.selectIndex = index;
-    if (index == currentIndex || !self.selItem) { return; }
+    if (!self.selItem) { return; }
     
     WMMenuItem *item = (WMMenuItem *)[self viewWithTag:tag];
     [self.selItem setSelected:NO withAnimation:NO];
